@@ -1,43 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design for Bootstrap</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<?php include('includes/header.php'); ?>
+<?php include('includes/navbar.php'); ?>
+<?php include('includes/carousel.php'); ?>
 
-  <!-- Start your project here-->  
-  <div style="height: 100vh">
-    <div class="flex-center flex-column">
-      <h1 class="text-hide animated fadeIn mb-4" style="background-image: url('https://mdbootstrap.com/img/logo/mdb-transparent-250px.png'); width: 250px; height: 90px;">MDBootstrap</h1>
-      <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
-      <p class="animated fadeIn text-muted">MDB Team</p>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3>Our Vision</h3>
+          <p>Hello. this is a funda of web IT</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3>Our Mission</h3>
+          <p>Hello. this is a funda of web IT</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3>Our Values</h3>
+          <p>Hello. this is a funda of web IT</p>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- End your project here-->
+</div>
 
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
-
-</body>
-</html>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h2>Welcome To My College Website</h2>
+          <hr>
+          <p>This is funda of web IT Tutorials for Website making
+          This is funda of web IT Tutorials for Website making
+          This is funda of web IT Tutorials for Website making</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+    <div class="card">
+        <div class="card-body">
+          <h2>Notices !</h2>
+          <hr>
+          <p>This is funda of web IT Tutorials for Website making</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php include('includes/footer.php'); ?>
