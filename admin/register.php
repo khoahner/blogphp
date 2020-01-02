@@ -31,12 +31,12 @@ include('includes/navbar.php');
 
           <div class="form-group">
             <label>Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Enter email">
+            <input type="password" name="password" class="form-control" placeholder="Enter password">
           </div>
 
           <div class="form-group">
             <label>Confirm Password</label>
-            <input type="password" name="confirmpassword" class="form-control" placeholder="Enter email">
+            <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm password">
           </div>
 
         </div>
