@@ -39,7 +39,7 @@ include('includes/navbar.php');
                             <input type="password" name="edit_password" value="<?php echo $row['password'] ?>" class="form-control" placeholder="Enter password">
                         </div>
                         <a href="register.php" class="btn btn-danger">Cancel</a>
-                        <button type="submit" name="updatebtn" class="btn btn-primary">Update</button>
+                        <button type="submit" name="update_btn" class="btn btn-primary">Update</button>
                     </form>
             <?php
                 }

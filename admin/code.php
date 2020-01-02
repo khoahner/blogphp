@@ -2,7 +2,7 @@
 session_start();
 $connection = mysqli_connect("localhost", "root", "", "adminpanel");
 
-if (isset($_POST['registerbtn'])) {
+if (isset($_POST['register_btn'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -27,29 +27,35 @@ if (isset($_POST['registerbtn'])) {
 
 
 
-if(isset($_POST['updatebtn']))
-{
-    $id=$_POST['edit_id'];
+if (isset($_POST['update_btn'])) {
+    $id = $_POST['edit_id'];
     $username = $_POST['edit_username'];
     $email = $_POST['edit_email'];
     $password = $_POST['edit_password'];
 
     $query = "UPDATE register SET username='$username',email='$email',password='$password' WHERE id='$id' ";
-    $query_run = mysqli_query ($connection, $query);
+    $query_run = mysqli_query($connection, $query);
 
-    if($query_run)
-    {
+    if ($query_run) {
         $_SESSION['success'] = "Your Data is Updated";
         header('location: register.php');
-    }
-    else
-    {
+    } else {
         $_SESSION['status'] = "Your Data is Not Updated";
         header('location: register.php');
     }
 }
 
 
+if (isset($_POST['delete_btn'])) {
+    $id = $_POST['delete_id'];
+    $query = "DELETE FROM register WHERE id='$id' ";
+    $query_run = mysqli_query($connection, $query);
 
-
-?>
+    if ($query_run) {
+        $_SESSION['success'] = "Your Data is Deleted";
+        header('location: register.php');
+    } else {
+        $_SESSION['status'] = "Your Data is Not Deleted";
+        header('location: register.php');
+    }
+}

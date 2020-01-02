@@ -43,7 +43,7 @@ include('includes/navbar.php');
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
+          <button type="submit" name="register_btn" class="btn btn-primary">Save</button>
         </div>
       </form>
 
@@ -65,14 +65,14 @@ include('includes/navbar.php');
 
       <?php
       if (isset($_SESSION['success']) && $_SESSION['success'] != '') {
-        echo '<h2> ' . $_SESSION['success'] . ' </h2>';
+        echo '<h2 class="bg-primary text-white"> ' . $_SESSION['success'] . ' </h2>';
         unset($_SESSION['success']);
       }
       ?>
 
       <?php
       if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
-        echo '<h2 class="bg-info"> ' . $_SESSION['status'] . ' </h2>';
+        echo '<h2 class="bg-danger text-white"> ' . $_SESSION['status'] . ' </h2>';
         unset($_SESSION['status']);
       }
       ?>
@@ -113,7 +113,10 @@ include('includes/navbar.php');
                     </form>
                   </td>
                   <td>
-                    <button type="submit" class="btn btn-danger">DELETE</button>
+                    <form action="code.php" method="post">
+                      <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+                    <button type="submit" name="delete_btn" class="btn btn-danger">DELETE</button>
+                    </form>
                   </td>
                 </tr>
             <?php
