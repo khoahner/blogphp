@@ -1,5 +1,6 @@
 <?php
-session_start();
+include('security.php');
+
 include('includes/header.php');
 include('includes/navbar.php');
 ?>
@@ -13,7 +14,7 @@ include('includes/navbar.php');
         </div>
         <div class="card-body">
             <?php
-            $connection = mysqli_connect("localhost", "root", "", "adminpanel");
+            
             if (isset($_POST['edit_btn'])) {
                 $id = $_POST['edit_id'];
                 $query = "SELECT * FROM register WHERE id='$id' ";
